@@ -41,7 +41,7 @@ export class ApiService {
     this.productlist.next(this.cartitemlist)
   }
 
-
+ 
 
   // remove all items
 
