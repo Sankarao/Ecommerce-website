@@ -1,0 +1,41 @@
+<div class="container-fluid" style="background-color: black;">
+    <div class="row justify-content-center text-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="header">
+                <h3 style="color: #fff; font-size: 23px;">Popular E-commerce Products</h3>
+            </div>
+            <div style="margin-left: 700px;" class="dropdown">
+                <i routerLink="cart-page" class="fas fa-shopping-cart" style="color: #fff; font-size:18px; cursor: pointer;">&nbsp;{{cartitems}}</i>
+                <ul class="dropdown-menu" *ngIf="this.showproduct.length>=1" style="background: black; border: 1px solid whitesmoke;">
+                    <div style="width: 280px;">
+                        <div class="row">
+                            <div class="col-7">
+                                <strong class="text-light">Your Cart items</strong>
+                            </div>
+                            <div class="col-3">
+                                <strong class="text-light">Price</strong>
+                            </div>
+                        </div>
+
+                        <!-- data looping throught ngfor -->
+                        
+                        <div class="row mt-3" *ngFor="let item of showproduct">
+                            <div class="col-7">
+                                <img style="width: 70px; margin-left: 5px;" src="{{item.thumbnail}}" alt="">
+                            </div>
+                            <div class="col-3">
+                                <h4 class="text-light">₹{{item.price}}</h4>
+                            </div>
+                            <div class="col-1">
+                                <i style="cursor:pointer;" (click)="delete(item)" class="fa fa-trash text-danger"></i>
+                            </div>
+                        </div>  
+                        <div class="text-center">
+                            <button *ngIf="this.showproduct.length>=1" (click)="emptycart()" class="btn btn-sm btn-warning mt-2">Empty Cart</button>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

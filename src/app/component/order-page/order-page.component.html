@@ -1,0 +1,19 @@
+<div class="card shadow-lg">
+    <div style="border-radius: 200px; height: 200px; width: 200px;background: #f8faf5; margin: 0 auto;">
+        <img style="width: 188px;" src="https://cdn.pixabay.com/photo/2017/01/13/01/22/ok-1976099_1280.png" alt="">
+    </div>
+    <!-- <h1 style="text-align: center;color: crimson;">{{username|titlecase}}</h1> -->
+    <div class="text-center">
+        <h2><span style="color: crimson;">Hi..{{username?.name}} </span>Order has Placed Successfully</h2>
+        <strong style="margin-left: 45px;">Thankyou For Shopping With Popular E-commerce</strong>
+        <h5 style="margin-top:20px;margin-left: 70px;color: green;">Kindly Pay Amount <strong style="color: blue;">₹{{grandtotal|number:'1.0-0'}}</strong>&nbsp;during dilivery</h5>    
+    </div>
+   <div class="text-center">
+    <h4 class="mt-2">Your Order details</h4>
+    <p><strong>Name:</strong>&nbsp;{{username?.name}}</p>
+    <p><strong>Email:</strong>&nbsp;{{username?.email}}</p>
+    <p><strong>Mobile:</strong>&nbsp;{{username?.mobile}}</p>
+    <p><strong>Address:</strong>&nbsp;{{username?.address}}</p>
+    </div>
+
+</div>
